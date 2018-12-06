@@ -1,13 +1,13 @@
 {
   "name": "spencer-color",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "spencer likes these colors",
   "main": "./builds/spencer-color.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "budo scratch.js:builds/spencer-color.js --live",
     "watch": "npm run start",
-    "build": "browserify scratch.js -t [ babelify --presets [ @babel/preset-env ] ] | uglifyjs -m -c > ./builds/spencer-color.js"
+    "build": "browserify ./src/index.js -t [ babelify --presets [ @babel/preset-env ] ] | uglifyjs -m -c > ./builds/spencer-color.js"
   },
   "repository": {
     "type": "git",
