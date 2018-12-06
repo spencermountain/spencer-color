@@ -14,4 +14,12 @@ console.log(colors.red)
 instead of the default html colors:
 ![image](https://user-images.githubusercontent.com/399657/49593436-8e46df80-f941-11e8-9522-4a4a17d52e53.png)
 
+```html
+<script src="https://unpkg.com/spencer-color"></script>
+<script>
+  let red= spencerColor.red
+  // '#cc7066'
+</script>
+```
+
 MIT

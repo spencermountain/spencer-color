@@ -1,5 +1,5 @@
 const spencerColor = require('./src')
-console.log(spencerColor)
+// const spencerColor = require('./builds/spencer-color')
 
 let el = document.querySelector('#stage')
 let html = Object.keys(spencerColor).map((k) => {
