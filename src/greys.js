@@ -5,7 +5,7 @@ const greys = {
   grey: '#4d4d4d',
   // light: '#a3a5a5',
   dim: '#d7d5d2',
-  light2: '#949a9e',
+  lightgrey: '#949a9e',
   // slate: '#51433e',
   dark: '#443d3d',
   bluegrey: '#606c74',

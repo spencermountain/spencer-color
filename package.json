@@ -1,8 +1,8 @@
 {
   "name": "spencer-color",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "spencer likes these colors",
-  "main": "./src/index.js",
+  "main": "./builds/spencer-color.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "budo scratch.js:builds/spencer-color.js --live",
