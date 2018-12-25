@@ -6,7 +6,7 @@ let html = Object.keys(spencerColor.colors).map((name) => {
 }).join('')
 document.querySelector('#stage').innerHTML = html
 
-const showList = function(list, title) {
+const showList = function(list) {
   list = list.map((c) => {
     return `<div class="w4 h3 rounded" style="background-color:${c};" title="${c}"></div>`
   }).join('')
@@ -27,3 +27,4 @@ Object.keys(spencerColor.combos).map((combo) => {
 // gradients += showList(spencerColor.browns)
 gradients += '</div>'
 document.querySelector('#gradients').innerHTML = gradients
+console.log(spencerColor.combos.dupont)

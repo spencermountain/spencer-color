@@ -34,6 +34,18 @@ let colors = {
   greyblue: '#72697D',
   greygreen: '#8BA3A2',
   greypurple: '#978BA3',
-  burn: '#6D5685'
+  burn: '#6D5685',
+
+  slategrey: '#bfb0b3',
+  light: '#a3a5a5',
+  lighter: '#d7d5d2',
+  fudge: '#4d4d4d',
+  lightgrey: '#949a9e',
+
+  white: '#fbfbfb',
+  dimgrey: '#606c74',
+  softblack: '#463D4F',
+  dark: '#443d3d',
+  black: '#333333'
 }
 module.exports = colors
