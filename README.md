@@ -1,12 +1,11 @@
-# spencer-color
-some colors i like to use
 
 <div align="center">
+  <div>some colors i like to use</div>
   <a href="https://npmjs.org/package/spencer-color">
     <img src="https://img.shields.io/npm/v/spencer-color.svg?style=flat-square" />
   </a>
   <a href="https://unpkg.com/spencer-color">
-    <img src="https://badge-size.herokuapp.com/spencermountain/spencer-color/master/builds/spencer-color.js" />
+    <img src="https://badge-size.herokuapp.com/spencermountain/spencer-color/gh-pages/builds/spencer-color.js" />
   </a>
 </div>
 
@@ -22,7 +21,7 @@ console.log(combos.dupont)
 // [ "#6accb2", "#705E5C", "#cc8a66", "#cc7066", "#7f9c6c", "#6699cc" ]
 ```
 
-yeah, instead of the default html colors:
+yeah, instead of these default html colors:
 
 
 ![image](https://user-images.githubusercontent.com/399657/49593436-8e46df80-f941-11e8-9522-4a4a17d52e53.png)
