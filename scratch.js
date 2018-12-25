@@ -20,11 +20,5 @@ Object.keys(spencerColor.combos).map((combo) => {
   gradients += `<div style="color:#9aa4ac; margin-top:1.5rem;">${combo}:</div>`
   gradients += showList(spencerColor[combo])
 })
-// gradients += showList(spencerColor.pinks)
-// gradients += showList(spencerColor.purples)
-// gradients += showList(spencerColor.steel)
-// gradients += showList(spencerColor.greens)
-// gradients += showList(spencerColor.browns)
 gradients += '</div>'
 document.querySelector('#gradients').innerHTML = gradients
-console.log(spencerColor.combos.dupont)

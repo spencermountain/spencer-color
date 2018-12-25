@@ -5,8 +5,9 @@
   "main": "./builds/spencer-color.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "budo scratch.js:builds/spencer-color.js --live",
+    "start": "budo scratch.js:assets/bundle.js --live",
     "watch": "npm run start",
+    "build:page": "browserify scratch.js -t [ babelify --presets [ @babel/preset-env ] ] | derequire > ./assets/bundle.js",
     "build": "browserify ./src/index.js --standalone spencerColor -t [ babelify --presets [ @babel/preset-env ] ] | uglifyjs -m -c > ./builds/spencer-color.js"
   },
   "repository": {
@@ -18,12 +19,13 @@
   "bugs": {
     "url": "https://github.com/spencermountain/spencer-color/issues"
   },
-  "homepage": "https://github.com/spencermountain/spencer-color#readme",
+  "homepage": "https://spencermounta.in/spencer-color/",
   "devDependencies": {
-    "@babel/core": "^7.1.6",
-    "@babel/preset-env": "^7.1.6",
-    "babelify": "^10.0.0",
-    "budo": "^11.5.0",
-    "uglify-js": "^3.4.9"
+    "@babel/core": "7.2.2",
+    "@babel/preset-env": "7.2.3",
+    "babelify": "10.0.0",
+    "derequire": "2.0.6",
+    "budo": "11.5.0",
+    "uglify-js": "3.4.9"
   }
 }
