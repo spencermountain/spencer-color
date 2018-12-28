@@ -4,8 +4,6 @@ const combos = require('./combos')
 let methods = {
   colors: colors,
   list: Object.keys(colors).map((k) => [k, colors[k]]),
-  combos: combos,
+  combos: combos
 }
-methods = Object.assign(methods, combos)
-
 module.exports = methods

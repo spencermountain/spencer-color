@@ -1,8 +1,8 @@
 const spencerColor = require('./src')
 // const spencerColor = require('./builds/spencer-color')
-
+console.log(spencerColor)
 let html = Object.keys(spencerColor.colors).map((name) => {
-  return `<div class="w6 h4 rounded" style="background-color:${spencerColor.colors[name]};" title="${name}"></div>`
+  return `<div class="w5 h4 rounded" style="background-color:${spencerColor.colors[name]};" title="${name}"></div>`
 }).join('')
 document.querySelector('#stage').innerHTML = html
 
@@ -18,7 +18,7 @@ const showList = function(list) {
 let gradients = '<div class="col left">'
 Object.keys(spencerColor.combos).map((combo) => {
   gradients += `<div style="color:#9aa4ac; margin-top:1.5rem;">${combo}:</div>`
-  gradients += showList(spencerColor[combo])
+  gradients += showList(spencerColor.combos[combo])
 })
 gradients += '</div>'
 document.querySelector('#gradients').innerHTML = gradients
