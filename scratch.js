@@ -1,14 +1,21 @@
 const spencerColor = require('./src')
+
+window.hmm = function(hex) {
+  let el = document.querySelector('#hmm')
+  el.innerHTML = hex
+  el.style['border-bottom'] = '4px solid ' + hex
+  el.style.margin = '10px'
+}
+
 // const spencerColor = require('./builds/spencer-color')
-console.log(spencerColor)
 let html = Object.keys(spencerColor.colors).map((name) => {
-  return `<div class="w5 h4 rounded" style="background-color:${spencerColor.colors[name]};" title="${name}"></div>`
+  return `<div class="w5 h4 rounded" onclick="hmm('${spencerColor.colors[name]}')" style="background-color:${spencerColor.colors[name]};" title="${name + spencerColor.colors[name]}"></div>`
 }).join('')
 document.querySelector('#stage').innerHTML = html
 
 const showList = function(list) {
   list = list.map((c) => {
-    return `<div class="w4 h3 rounded" style="background-color:${c};" title="${c}"></div>`
+    return `<div class="w4 h3 rounded" onclick="hmm('${c}')" style="background-color:${c};" title="${c}"></div>`
   }).join('')
   return `<div class="row">
     ${list}
