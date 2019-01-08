@@ -1,6 +1,6 @@
 {
   "name": "spencer-color",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "spencer likes these colors",
   "main": "./builds/spencer-color.js",
   "scripts": {

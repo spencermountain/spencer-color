@@ -1,4 +1,7 @@
 const spencerColor = require('./src')
+//log it for the console in the demo
+window.spencerColor = spencerColor
+console.log(spencerColor)
 
 window.hmm = function(hex) {
   let el = document.querySelector('#hmm')
@@ -9,7 +12,7 @@ window.hmm = function(hex) {
 
 // const spencerColor = require('./builds/spencer-color')
 let html = Object.keys(spencerColor.colors).map((name) => {
-  return `<div class="w5 h4 rounded" onclick="hmm('${spencerColor.colors[name]}')" style="background-color:${spencerColor.colors[name]};" title="${name + spencerColor.colors[name]}"></div>`
+  return `<div class="w5 h4 rounded" onclick="hmm('${spencerColor.colors[name]}')" style="background-color:${spencerColor.colors[name]};" title="${name}"></div>`
 }).join('')
 document.querySelector('#stage').innerHTML = html
 

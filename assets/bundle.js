@@ -1,17 +1,28 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(_dereq_,module,exports){
 "use strict";
 
-var spencerColor = _dereq_('./src'); // const spencerColor = require('./builds/spencer-color')
+var spencerColor = _dereq_('./src'); //log it for the console in the demo
+
+
+window.spencerColor = spencerColor;
+console.log(spencerColor);
+
+window.hmm = function (hex) {
+  var el = document.querySelector('#hmm');
+  el.innerHTML = hex;
+  el.style['border-bottom'] = '4px solid ' + hex;
+  el.style.margin = '10px';
+}; // const spencerColor = require('./builds/spencer-color')
 
 
 var html = Object.keys(spencerColor.colors).map(function (name) {
-  return "<div class=\"w6 h4 rounded\" style=\"background-color:".concat(spencerColor.colors[name], ";\" title=\"").concat(name, "\"></div>");
+  return "<div class=\"w5 h4 rounded\" onclick=\"hmm('".concat(spencerColor.colors[name], "')\" style=\"background-color:").concat(spencerColor.colors[name], ";\" title=\"").concat(name, "\"></div>");
 }).join('');
 document.querySelector('#stage').innerHTML = html;
 
 var showList = function showList(list) {
   list = list.map(function (c) {
-    return "<div class=\"w4 h3 rounded\" style=\"background-color:".concat(c, ";\" title=\"").concat(c, "\"></div>");
+    return "<div class=\"w4 h3 rounded\" onclick=\"hmm('".concat(c, "')\" style=\"background-color:").concat(c, ";\" title=\"").concat(c, "\"></div>");
   }).join('');
   return "<div class=\"row\">\n    ".concat(list, "\n  </div>");
 };
@@ -19,7 +30,7 @@ var showList = function showList(list) {
 var gradients = '<div class="col left">';
 Object.keys(spencerColor.combos).map(function (combo) {
   gradients += "<div style=\"color:#9aa4ac; margin-top:1.5rem;\">".concat(combo, ":</div>");
-  gradients += showList(spencerColor[combo]);
+  gradients += showList(spencerColor.combos[combo]);
 });
 gradients += '</div>';
 document.querySelector('#gradients').innerHTML = gradients;
@@ -118,11 +129,10 @@ var combos = _dereq_('./combos');
 var methods = {
   colors: colors,
   list: Object.keys(colors).map(function (k) {
-    return [k, colors[k]];
+    return colors[k];
   }),
   combos: combos
 };
-methods = Object.assign(methods, combos);
 module.exports = methods;
 
 },{"./colors":2,"./combos":3}]},{},[1]);
