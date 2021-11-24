@@ -48,4 +48,4 @@ let colors = {
   dark: '#443d3d',
   black: '#333333'
 }
-module.exports = colors
+export default colors

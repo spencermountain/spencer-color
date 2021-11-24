@@ -1,8 +1,18 @@
 {
   "name": "spencer-color",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "spencer likes these colors",
   "main": "./builds/spencer-color.js",
+  "module": "./src/index.js",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "require": "./builds/spencer-color.js",
+      "import": "./src/index.js",
+      "default": "./src/index.js"
+    }
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "budo scratch.js:assets/bundle.js --live",

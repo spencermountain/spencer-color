@@ -1,9 +1,6 @@
-const colors = require('./colors')
-const combos = require('./combos')
+import colors from './colors'
+import combos from './combos'
 
-let methods = {
-  colors: colors,
-  list: Object.keys(colors).map((k) => colors[k]),
-  combos: combos
-}
-module.exports = methods
+const list = Object.keys(colors).map((k) => colors[k])
+
+export { methods, combos, list }

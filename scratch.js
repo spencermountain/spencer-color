@@ -1,9 +1,9 @@
-const spencerColor = require('./src')
+const spencerColor = require('./src').default
 //log it for the console in the demo
 window.spencerColor = spencerColor
 console.log(spencerColor)
 
-window.hmm = function(hex) {
+window.hmm = function (hex) {
   let el = document.querySelector('#hmm')
   el.innerHTML = hex
   el.style['border-bottom'] = '4px solid ' + hex
@@ -16,7 +16,7 @@ let html = Object.keys(spencerColor.colors).map((name) => {
 }).join('')
 document.querySelector('#stage').innerHTML = html
 
-const showList = function(list) {
+const showList = function (list) {
   list = list.map((c) => {
     return `<div class="w4 h3 rounded" onclick="hmm('${c}')" style="background-color:${c};" title="${c}"></div>`
   }).join('')
